@@ -1,7 +1,7 @@
 apiVersion: devops.alauda.io/v1alpha1
 kind: PipelineTemplate
 metadata:
-  name: buildwithoutCI
+  name: BuildwithoutCI
   annotations:
     alauda.io/displayName.zh-CN: 构建无CI1构建无CI1构建无CI1构建无CI1构建无CI1构建无CI1构建无CI1
     alauda.io/displayName.en: Build docker image
@@ -43,7 +43,7 @@ spec:
               zh-CN: "CI开关"
               en: "CI enable"
           required: false
-          default: true
+          default: ""
         - name: "dockerfilePath"
           schema:
             type: string
@@ -131,5 +131,5 @@ spec:
             name:
               zh-CN: "开启镜像缓存"
               en: "Use image cache"
-          default: true
+          default: ""
           required: true
