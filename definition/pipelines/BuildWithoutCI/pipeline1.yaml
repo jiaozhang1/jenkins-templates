@@ -1,13 +1,13 @@
 apiVersion: devops.alauda.io/v1alpha1
 kind: PipelineTemplate
 metadata:
-  name: buildwithoutCI
+  name: MoreStages
   annotations:
-    alauda.io/displayName.zh-CN: 构建无CI1构建无CI1构建无CI1构建无CI1构建无CI1构建无CI1构建无CI1
+    alauda.io/displayName.zh-CN: 有好多好多stage有好多好多stage有好多好多stage
     alauda.io/displayName.en: Build docker image
-    alauda.io/description.zh-CN: 克隆代码并构建镜像
+    alauda.io/description.zh-CN: 有好多好多stage
     alauda.io/description.en: Clone code and builds a docker image
-    alauda.io/readme.zh-CN: 克隆代码并构建镜像
+    alauda.io/readme.zh-CN: 有好多好多好多好多stage
     alauda.io/readme.en: Clone code and builds a docker image
     alauda.io/version: v0.14
     alauda.io/style.icon: build
@@ -20,7 +20,43 @@ spec:
     - name: Clone
       tasks:
         - name: Clone
-          type: public/clone
+          type: public/clone 
+    - name: Checkout
+      tasks:
+        - name: Checkout
+          type: public/Checkout
+    - name: Test1
+      tasks:
+        - name: Test1
+          type: public/Test1
+    - name: Test2
+      tasks:
+        - name: Test2
+          type: public/Test2
+    - name: Test3
+      tasks:
+        - name: Test3
+          type: public/Test3
+    - name: Test4
+      tasks:
+        - name: Test4
+          type: public/Test4
+    - name: Test5
+      tasks:
+        - name: Test5
+          type: public/Test5
+    - name: Test6
+      tasks:
+        - name: Test6
+          type: public/Test6   
+    - name: Test7
+      tasks:
+        - name: Test7
+          type: public/Test7
+    - name: Test8
+      tasks:
+        - name: Test8
+          type: public/Test8 
     - name: BuildImage
       tasks:
         - name: BuildImage
@@ -40,10 +76,10 @@ spec:
           display:
             type: boolean
             name:
-              zh-CN: "CI开关"
+              zh-CN: "CI开关1"
               en: "CI enable"
           required: false
-          default: true
+          default: ""
         - name: "dockerfilePath"
           schema:
             type: string
@@ -131,5 +167,5 @@ spec:
             name:
               zh-CN: "开启镜像缓存"
               en: "Use image cache"
-          default: true
+          default: ""
           required: true

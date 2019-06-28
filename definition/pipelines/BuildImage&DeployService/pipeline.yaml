@@ -2,7 +2,7 @@
 apiVersion: devops.alauda.io/v1alpha1
 kind: PipelineTemplate
 metadata:
-  name: alaudaBuildImageAndDeployService
+  name: BuildImageAndDeployService
   annotations:
     alauda.io/displayName.zh-CN: 构建并更新服务
     alauda.io/displayName.en: Build image and update service
@@ -13,7 +13,7 @@ metadata:
     alauda.io/version: v0.1
     alauda.io/style.icon: buildUpdateService
   labels:
-    catgory: CICD
+    category: CICD
 spec:
   engine: graph
   withSCM: true
